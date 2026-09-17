@@ -12,7 +12,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import styles from "./CriarPublicacaoStyle";
+// IMPORT CORRIGIDO
+import styles from "./CriarPublicaoStyle";
 
 export default function CriarPublicacao() {
 
@@ -32,6 +33,7 @@ export default function CriarPublicacao() {
     }
 
     return (
+
         <SafeAreaView style={styles.container}>
 
             {/* CABEÇALHO */}
@@ -42,11 +44,13 @@ export default function CriarPublicacao() {
                     style={styles.botaoVoltar}
                     onPress={() => router.back()}
                 >
+
                     <Ionicons
                         name="close"
                         size={25}
                         color="#F5E6C8"
                     />
+
                 </TouchableOpacity>
 
                 <Text style={styles.titulo}>
@@ -71,11 +75,13 @@ export default function CriarPublicacao() {
                 <View style={styles.usuario}>
 
                     <View style={styles.avatar}>
+
                         <Ionicons
                             name="person"
                             size={26}
                             color="#D4AF37"
                         />
+
                     </View>
 
                     <View>
@@ -116,6 +122,7 @@ export default function CriarPublicacao() {
                 <View style={styles.opcoes}>
 
                     <TouchableOpacity style={styles.opcao}>
+
                         <Ionicons
                             name="image-outline"
                             size={22}
@@ -125,10 +132,12 @@ export default function CriarPublicacao() {
                         <Text style={styles.opcaoTexto}>
                             Imagem
                         </Text>
+
                     </TouchableOpacity>
 
 
                     <TouchableOpacity style={styles.opcao}>
+
                         <Ionicons
                             name="location-outline"
                             size={22}
@@ -138,10 +147,12 @@ export default function CriarPublicacao() {
                         <Text style={styles.opcaoTexto}>
                             Localização
                         </Text>
+
                     </TouchableOpacity>
 
 
                     <TouchableOpacity style={styles.opcao}>
+
                         <Ionicons
                             name="happy-outline"
                             size={22}
@@ -151,12 +162,13 @@ export default function CriarPublicacao() {
                         <Text style={styles.opcaoTexto}>
                             Sentimento
                         </Text>
+
                     </TouchableOpacity>
 
                 </View>
 
 
-                {/* BOTÃO */}
+                {/* BOTÃO PUBLICAR */}
 
                 <TouchableOpacity
                     style={[
@@ -261,5 +273,7 @@ export default function CriarPublicacao() {
             </View>
 
         </SafeAreaView>
+
     );
+
 }

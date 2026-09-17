@@ -10,8 +10,9 @@ import {
 
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
 import styles from "./FeedStyle";
 
 export default function Feed() {
@@ -35,6 +36,12 @@ export default function Feed() {
 
   const handleInicio = () => {
     router.replace("/feed");
+  };
+
+  // ABRIR DETALHES DA PUBLICAÇÃO
+
+  const handleDetalhes = () => {
+    router.push("/detalhePubli");
   };
 
 
@@ -63,8 +70,6 @@ export default function Feed() {
             color="#F5E6C8"
           />
 
-          {/* <View style={styles.notificationDot} /> */}
-
         </TouchableOpacity>
 
       </View>
@@ -84,7 +89,11 @@ export default function Feed() {
             PRIMEIRO POST
         ==================================== */}
 
-        <View style={styles.postCard}>
+        <TouchableOpacity
+          style={styles.postCard}
+          onPress={handleDetalhes}
+          activeOpacity={0.8}
+        >
 
           <View style={styles.postHeader}>
 
@@ -122,14 +131,18 @@ export default function Feed() {
 
           <View style={styles.separator} />
 
-        </View>
+        </TouchableOpacity>
 
 
         {/* ===================================
             SEGUNDO POST
         ==================================== */}
 
-        <View style={styles.postCard}>
+        <TouchableOpacity
+          style={styles.postCard}
+          onPress={handleDetalhes}
+          activeOpacity={0.8}
+        >
 
           <View style={styles.postHeader}>
 
@@ -167,12 +180,8 @@ export default function Feed() {
 
           <View style={styles.separator} />
 
-        </View>
+        </TouchableOpacity>
 
-
-        {/* Espaço para o botão flutuante */}
-
-        {/* <View style={styles.bottomFeedSpace} /> */}
 
       </ScrollView>
 
@@ -193,9 +202,10 @@ export default function Feed() {
 
       </TouchableOpacity>
 
+
       {/* =========================
-           MENU INFERIOR
-          ========================= */}
+          MENU INFERIOR
+      ========================= */}
 
       <View
         style={[
@@ -211,7 +221,7 @@ export default function Feed() {
 
         <TouchableOpacity
           style={styles.itemAtivo}
-          onPress={() => router.replace("/feed")}
+          onPress={handleInicio}
           activeOpacity={0.7}
         >
 
@@ -232,7 +242,7 @@ export default function Feed() {
 
         <TouchableOpacity
           style={styles.item}
-          onPress={() => router.push("/publicacao")}
+          onPress={handleCriar}
           activeOpacity={0.7}
         >
 
@@ -253,7 +263,7 @@ export default function Feed() {
 
         <TouchableOpacity
           style={styles.item}
-          onPress={() => router.push("/notificacoes")}
+          onPress={handleNotificacoes}
           activeOpacity={0.7}
         >
 
@@ -274,7 +284,7 @@ export default function Feed() {
 
         <TouchableOpacity
           style={styles.item}
-          onPress={() => router.push("/perfil")}
+          onPress={handlePerfil}
           activeOpacity={0.7}
         >
 
@@ -291,6 +301,7 @@ export default function Feed() {
         </TouchableOpacity>
 
       </View>
+
     </SafeAreaView>
   );
 }

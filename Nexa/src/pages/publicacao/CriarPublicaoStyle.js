@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#0B0B0C",
     },
 
-    /* HEADER */
+
+    /* CABEÇALHO */
 
     header: {
         height: 68,
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
 
     titulo: {
         color: "#F5E6C8",
+
         fontSize: 20,
         fontWeight: "bold",
     },
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     headerVazio: {
         width: 40,
     },
+
 
     /* SCROLL */
 
@@ -50,6 +53,7 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingBottom: 100,
     },
+
 
     /* USUÁRIO */
 
@@ -92,7 +96,8 @@ const styles = StyleSheet.create({
         marginTop: 3,
     },
 
-    /* INPUT */
+
+    /* CAMPO DE TEXTO */
 
     input: {
         width: "100%",
@@ -110,7 +115,6 @@ const styles = StyleSheet.create({
         color: "#F5E6C8",
 
         fontSize: 16,
-
         lineHeight: 22,
     },
 
@@ -124,6 +128,7 @@ const styles = StyleSheet.create({
         marginTop: 6,
         marginBottom: 20,
     },
+
 
     /* OPÇÕES */
 
@@ -157,6 +162,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
     },
 
+
     /* BOTÃO */
 
     botao: {
@@ -181,39 +187,50 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
 
-    /* MENU */
+
+    /* MENU INFERIOR */
 
     menu: {
         height: 76,
+
         backgroundColor: "#1A1B1F",
+
         borderTopWidth: 1,
         borderTopColor: "#3B3C41",
+
         flexDirection: "row",
+
         justifyContent: "space-around",
         alignItems: "center",
     },
 
     item: {
         flex: 1,
+
         alignItems: "center",
         justifyContent: "center",
+
         gap: 4,
     },
 
     itemAtivo: {
         flex: 1,
+
         alignItems: "center",
         justifyContent: "center",
+
         gap: 4,
     },
 
     textoMenu: {
         color: "#F5E6C8",
+
         fontSize: 10,
     },
 
     textoMenuAtivo: {
         color: "#D4AF37",
+
         fontSize: 10,
         fontWeight: "bold",
     },
