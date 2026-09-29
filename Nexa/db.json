@@ -1,0 +1,27 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Davi",
+      "email": "davi@gmail.com",
+      "senha": "1234",
+      "usuario": "davizqk",
+      "bio": "Olá! Estou usando o Nexa.",
+      "seguidores": 0,
+      "seguindo": 0
+    },
+    {
+      "id": "2",
+      "nome": "Paulo",
+      "email": "paulo@gmail.com",
+      "senha": "1234",
+      "usuario": "paulozqk",
+      "bio": "Olá! Estou usando o Nexa.",
+      "seguidores": 0,
+      "seguindo": 0
+    }
+  ],
+  "publicacoes": [],
+  "comentarios": [],
+  "notificacoes": []
+}
